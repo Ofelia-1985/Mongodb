@@ -109,6 +109,6 @@ db.comments.aggregate([
         as:"comments"
     }},{
             $project: {
-    movie:"$title",comments:"$text"}
+_id:"", movie:"$comments.title",comments:"$text"}
     }
 ])
