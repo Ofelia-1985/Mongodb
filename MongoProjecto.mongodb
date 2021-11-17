@@ -20,14 +20,14 @@ db.filmes.insertMany([
 
 db.filmes.find({
     ano:{ $gte:"1997", $lte:"2004"}
-}).count()
+}).count() // Foi pedido para buscar e não contar
 
 
 //3 - Busque filmes de 2001 ou que comecem com a letra D.
 
 db.filmes.find({
     $or:[{ano:"2001"},{nome:/^D/}]
-})
+}) 
 
 //4 - Busque filmes lançados dirigidos pelo Peter Jackson ou pelo Walter Salles usando $in.
 
